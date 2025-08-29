@@ -34,6 +34,13 @@ async function submitOrder() {
     alert("您的購物車是空的！");
     return;
   }
+
+  // 如果選擇了非現金支付，則使用 toast 提示使用者並中斷執行
+  if (paymentMethod.value === "credit_card" || paymentMethod.value === "line_pay") {
+    showToast("此功能僅供展示，請選擇現金支付");
+    return;
+  }
+
   if (isSubmitting.value) return;
 
   isSubmitting.value = true;
@@ -48,11 +55,13 @@ async function submitOrder() {
 
   await new Promise((resolve) => setTimeout(resolve, 500));
 
+  // 因為上面的檢查，理論上只會剩下 'cash' 的情況
   if (paymentMethod.value === "cash") {
     showToast("訂單已送出，請至櫃檯付款");
     cartStore.clearCart();
     router.push("/order-cash-payment");
   } else {
+    // 保留此區塊以防萬一，但正常情況下不會進入
     showToast("付款成功，訂單已成立！");
     cartStore.clearCart();
     router.push("/order-success");
