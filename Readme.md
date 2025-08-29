@@ -16,7 +16,18 @@
 
 ## 🖼️ 專案預覽 (Screenshots)
 
-<img src="./vue-order/public/images/index1.png" alt="點餐流程" width="900" />
+### 點餐流程
+
+<div align="center">
+<img src="./vue-order/public/images/index1.png" alt="點餐流程" width="600" />
+</div>
+
+<div align="center">
+
+### 結帳流程
+
+<img src="./vue-order/public/images/index1.png" alt="點餐流程" width="600" />  
+</div>
 
 ## 🚀 核心功能 (Features)
 
