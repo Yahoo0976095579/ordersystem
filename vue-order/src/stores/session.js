@@ -11,8 +11,8 @@ export const useSessionStore = defineStore("session", () => {
     let storedId = localStorage.getItem("sessionId");
 
     if (!storedId) {
-      // 如果是第一次访问，我们为了展示，强制使用 mock session
-      storedId = "mock-data-session";
+      // 如果是第一次访问，直接产生一个新的 session
+      storedId = uuidv4();
       localStorage.setItem("sessionId", storedId);
     }
 
