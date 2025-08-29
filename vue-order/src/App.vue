@@ -116,15 +116,15 @@ nav {
   padding: 2px 6px;
   font-size: 0.75rem;
 }
-/* 新增 Toast 樣式 */
+/* Toast 樣式 - 電腦版預設 */
 #toast-container {
   position: fixed;
-  /* top: 80px;  <-- 刪除或註解掉這一行 */
-  bottom: 20px; /* <-- 新增這一行，定位到右下角 */
+  top: 80px;
   right: 20px;
   z-index: 9999;
   display: flex;
   flex-direction: column;
+  align-items: flex-end; /* 讓 toast 在容器內靠右 */
   gap: 10px;
 }
 .toast {
@@ -172,22 +172,6 @@ nav {
   transform: translateY(0);
 }
 
-/* ... 保留所有其他 CSS 樣式 ... */
-
-/* 手機版的樣式調整 */
-@media (max-width: 768px) {
-  /*
-    * 移除或註解掉這行，讓手機板顯示文字
-    * .nav-link-item .text {
-    * display: none;
-    * }
-  */
-
-  /* 其他手機版樣式可以保留 */
-  .nav-link-item {
-    padding: 0.5rem; /* 縮小手機上的內距 */
-  }
-}
 @keyframes slideIn {
   to {
     opacity: 1;
@@ -203,6 +187,8 @@ nav {
     transform: translateX(100%);
   }
 }
+
+/* 手機版的樣式調整 */
 @media (max-width: 768px) {
   main {
     padding-bottom: 80px; /* 留出 floating bar 的空間 */
@@ -210,9 +196,23 @@ nav {
   .cart-link {
     display: none;
   }
+  .nav-link-item {
+    padding: 0.5rem; /* 縮小手機上的內距 */
+  }
+
+  /* 手機版 Toast 樣式 */
   #toast-container {
-    /* 在手機上，讓它顯示在懸浮購物車的上方 */
+    top: auto;
     bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+    width: 90%;
+    align-items: center;
+  }
+  .toast {
+    width: 100%;
+    text-align: center;
   }
 }
 </style>
