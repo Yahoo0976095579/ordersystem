@@ -22,10 +22,9 @@
 <img src="./vue-order/public/images/index1.png" alt="點餐流程" width="600" />
 </div>
 
-<div align="center">
-
 ### 結帳流程
 
+<div align="center">
 <img src="./vue-order/public/images/index2.png" alt="點餐流程" width="600" />  
 </div>
 
