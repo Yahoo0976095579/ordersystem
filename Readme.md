@@ -16,8 +16,7 @@
 
 ## 🖼️ 專案預覽 (Screenshots)
 
-<!-- 請將此處替換為您的專案截圖 -->
-<!-- <img src="./path/to/screenshot.png" alt="專案畫面" width="700"/> -->
+<img src="./vue-order/public/images/index.png" alt="點餐首頁" width="300" />
 
 ## 🚀 核心功能 (Features)
 
