@@ -26,7 +26,7 @@
 
 ### 結帳流程
 
-<img src="./vue-order/public/images/index1.png" alt="點餐流程" width="600" />  
+<img src="./vue-order/public/images/index2.png" alt="點餐流程" width="600" />  
 </div>
 
 ## 🚀 核心功能 (Features)
